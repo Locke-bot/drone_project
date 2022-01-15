@@ -19,10 +19,11 @@ DRONE_STATES = (
 
 class Drone(models.Model):
     serial_number       =       models.CharField(max_length=100, unique=True)
-    model               =       models.CharField(max_length=50, choices=MODEL_CHOICES)
+    model               =       models.CharField(max_length=50, choices=MODEL_CHOICES, default="Lightweight")
     weight_limit        =       models.FloatField(default=0)
     battery_capacity    =       models.IntegerField(default=0)
-    state               =       models.CharField(max_length=50, choices=DRONE_STATES)
+    state               =       models.CharField(max_length=50, choices=DRONE_STATES, default="IDLE")
+    
     
     def loaded_weight(self):
         loaded_weight = Medication.objects.filter(drone=self).aggregate(Sum("weight")).get("weight__sum", 0)
