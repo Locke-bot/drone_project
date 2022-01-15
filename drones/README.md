@@ -3,6 +3,9 @@ The project is built in Django with Django Rest Framework. To run the project yo
 All project dependencies are available in the ***requirement.txt*** file, and are ready to be installed as described below.
 
 
+
+You can see all the API endpoint documentation on Postman here ***https://documenter.getpostman.com/view/10489218/UVXjLGQA#intro***
+
 ## Build Instructions
 
 From your command line tool run the steps below to build the project:

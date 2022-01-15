@@ -13,7 +13,6 @@ There is a major new technology that is destined to be a disruptive force in the
 
 Useful drone functions include delivery of small items that are (urgently) needed in locations with difficult access.
 
-You can see all the API endpoint documentation on Postman here ***https://documenter.getpostman.com/view/10489218/UVXjLGQA#intro***
 ---
 
 ### Task description
