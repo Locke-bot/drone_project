@@ -14,8 +14,6 @@ class DroneSerializer(serializers.ModelSerializer):
     weight_limit        =       serializers.FloatField(min_value=0, max_value=500, required=True)
     battery_capacity    =       serializers.IntegerField(min_value=0, max_value=100, required=True)
     
-    # def validate_serial
-    
     class Meta:
         model = Drone
         fields = "__all__"
@@ -32,7 +30,6 @@ class MedicationSerializer(serializers.ModelSerializer):
                                                         'Only uppercase letters, numbers and _ are allowed.')])
     drone               =       serializers.PrimaryKeyRelatedField(many=False, required=True, 
                                                         queryset=Drone.objects.filter(Q(state="LOADING")&Q(battery_capacity__gte = 25)).all())
-    # image               =       serializers.ImageField(null=True, upload_to='medications', max_length=1024)
     
     def validate_weight(self, value):
         drone_id = self.initial_data.get("drone", None)
