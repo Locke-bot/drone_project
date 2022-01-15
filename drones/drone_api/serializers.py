@@ -7,10 +7,26 @@ from django.core.validators import RegexValidator
 from rest_framework.validators import UniqueValidator
 from django.db.models import Sum
 
+DRONE_STATES = (
+    ("IDLE", "IDLE"),
+    ("LOADING", "LOADING"),
+    ("DELIVERING", "DELIVERING"),
+    ("DELIVERED", "DELIVERED"),
+    ("RETURNING", "RETURNING")
+)
+
+MODEL_CHOICES = (
+    ("Lightweight", "Lightweight"),
+    ("Middleweight", "Middleweight"),
+    ("Cruiserweight", "Cruiserweight"),
+    ("Heavyweight", "Heavyweight")
+)
+
 class DroneSerializer(serializers.ModelSerializer):
     serial_number       =       serializers.CharField(max_length=100, required=True, 
                                                            validators=[UniqueValidator(queryset=Drone.objects.all())])
-    model               =       serializers.CharField(max_length=50, required=True)
+    model               =       serializers.ChoiceField(required=True, choices=MODEL_CHOICES)
+    state               =       serializers.ChoiceField(required=True, choices=DRONE_STATES)
     weight_limit        =       serializers.FloatField(min_value=0, max_value=500, required=True)
     battery_capacity    =       serializers.IntegerField(min_value=0, max_value=100, required=True)
     
