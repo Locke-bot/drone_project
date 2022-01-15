@@ -4,7 +4,7 @@ All project dependencies are available in the ***requirement.txt*** file, and ar
 
 
 
-You can see all the API endpoint documentation on Postman here ***https://documenter.getpostman.com/view/10489218/UVXjLGQA#intro***
+You can see all the API endpoints documentation on Postman here ***https://documenter.getpostman.com/view/10489218/UVXjLGQA#intro***
 
 ## Build Instructions
 
