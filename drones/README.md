@@ -1,0 +1,35 @@
+## Build & Run Instructions
+
+From your command line tool run the steps below to build the project:
+- **git clone https://oauth:glpat-uzgVi68z6ess8j6ymxzb@gitlab.com/musala-coding-tasks-solutions/oluwatobi-sholanke.git**
+- cd oluwatobi-sholanke
+- source env/bin/activate 
+- cd drones
+- python manage.py runserver
+
+The project will be served on http://localhost:8000
+
+If you have another process running on port 8000, please speciafy port address when running as shown below
+- python manage.py runserver localhost:8001
+
+In the example above, I used port address 8001
+
+
+
+## Test Instructions
+
+From your command line tool run the steps below to test:
+- cd oluwatobi-sholanke
+- source env/bin/activate 
+- cd drones
+- python manage.py test
+
+You should see the test result show like:
+
+>Found 7 test(s).
+>Creating test database for alias 'default'...
+>System check identified no issues (0 silenced).
+>.......
+>Ran 7 tests in 0.027s
+>OK
+>Destroying test database for alias 'default'...
