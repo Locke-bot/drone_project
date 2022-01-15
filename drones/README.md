@@ -1,6 +1,6 @@
 This is the solution to the coding assignment. 
 The project is built in Django with Django Rest Framework. To run the project you only need Python 3 and the python package manage (pip) to be installed on your local machine. 
-All project dependencies are available in the ***requirement.txt*** file.
+All project dependencies are available in the ***requirement.txt*** file, and are ready to be installed as described below.
 
 
 ## Build Instructions
