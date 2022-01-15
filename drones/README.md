@@ -1,3 +1,8 @@
+This is the solution to the coding assignment. 
+The project is built in Django with Django Rest Framework. To run the project you only need Python 3 to be installed on your local machine. 
+All project dependencies have also been uploaded in the **env** directory.
+
+
 ## Build & Run Instructions
 
 From your command line tool run the steps below to build the project:
