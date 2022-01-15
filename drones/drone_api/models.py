@@ -36,3 +36,10 @@ class Medication(models.Model):
     image               =       models.ImageField(null=True, upload_to='medications', max_length=1024)
     drone               =       models.ForeignKey(Drone, null=True, on_delete=models.SET_NULL)
     
+class BatteryLevelLog(models.Model):
+    drone               =       models.ForeignKey(Drone, null=True, on_delete=models.SET_NULL)
+    serial_number       =       models.CharField(max_length=255, null=True)
+    state               =       models.CharField(max_length=255, null=True)
+    battery_level       =       models.IntegerField(default=0)
+    timestamp           =       models.DateTimeField(auto_now_add=True)
+    
